@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D41139029B43A4300D40A9A /* SuffixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41138F29B43A4300D40A9A /* SuffixTests.swift */; };
+		8DB291B129913FE700D05DE3 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB291B029913FE700D05DE3 /* AppEntry.swift */; };
+		8DB291B329913FE700D05DE3 /* FoodPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB291B229913FE700D05DE3 /* FoodPickerScreen.swift */; };
+		8DB291B529913FE800D05DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB291B429913FE800D05DE3 /* Assets.xcassets */; };
+		8DB291B829913FE800D05DE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB291B729913FE800D05DE3 /* Preview Assets.xcassets */; };
+		8DB291BF29934DE700D05DE3 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB291BE29934DE700D05DE3 /* Food.swift */; };
+		8DB291C1299399FB00D05DE3 /* AnyLayout+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB291C0299399FB00D05DE3 /* AnyLayout+.swift */; };
+		8DB291C329939E1600D05DE3 /* SuffixWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB291C229939E1600D05DE3 /* SuffixWrapper.swift */; };
+		8DB291C52997817E00D05DE3 /* ShapeStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB291C42997817E00D05DE3 /* ShapeStyleView.swift */; };
+		8DB291CB2998C8C500D05DE3 /* FoodListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB291CA2998C8C500D05DE3 /* FoodListScreen.swift */; };
+		8DB291D2299CB97A00D05DE3 /* FoodForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB291D1299CB97A00D05DE3 /* FoodForm.swift */; };
+		8DEBD940299E17A700BB792A /* FoodDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD93F299E17A700BB792A /* FoodDetailSheet.swift */; };
+		8DEBD942299E182700BB792A /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD941299E182700BB792A /* Sheet.swift */; };
+		8DEBD945299E19EA00BB792A /* SFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD944299E19EA00BB792A /* SFSymbol.swift */; };
+		8DEBD947299E29B200BB792A /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD946299E29B200BB792A /* View+.swift */; };
+		8DEBD949299E29E800BB792A /* Animation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD948299E29E800BB792A /* Animation+.swift */; };
+		8DEBD94B299E2A0800BB792A /* ShapeStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD94A299E2A0800BB792A /* ShapeStyle+.swift */; };
+		8DEBD94D299E2A2900BB792A /* AnyTransition+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD94C299E2A2900BB792A /* AnyTransition+.swift */; };
+		8DEBD94F299F574A00BB792A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD94E299F574A00BB792A /* HomeScreen.swift */; };
+		8DEBD951299F6C7F00BB792A /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD950299F6C7F00BB792A /* SettingsScreen.swift */; };
+		8DEBD953299F799B00BB792A /* AppStorage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD952299F799B00BB792A /* AppStorage+.swift */; };
+		8DEBD955299F7F4C00BB792A /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD954299F7F4C00BB792A /* Unit.swift */; };
+		8DEBD957299F7F8600BB792A /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD956299F7F8600BB792A /* UserDefaultsKey.swift */; };
+		8DEBD959299FCE2600BB792A /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD958299FCE2600BB792A /* Array+.swift */; };
+		8DEBD95B299FCE7900BB792A /* ForEach+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD95A299FCE7900BB792A /* ForEach+.swift */; };
+		8DEBD95F299FCF6600BB792A /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD95E299FCF6600BB792A /* Tab.swift */; };
+		8DEBD965299FD0E000BB792A /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD964299FD0E000BB792A /* Dialog.swift */; };
+		8DEBD96729A07C5D00BB792A /* TabViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBD96629A07C5D00BB792A /* TabViewTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D41139129B43A4300D40A9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DB291A529913FE700D05DE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DB291AC29913FE700D05DE3;
+			remoteInfo = FoodPicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8D41138D29B43A4300D40A9A /* FoodPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D41138F29B43A4300D40A9A /* SuffixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixTests.swift; sourceTree = "<group>"; };
+		8DB291AD29913FE700D05DE3 /* FoodPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB291B029913FE700D05DE3 /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
+		8DB291B229913FE700D05DE3 /* FoodPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPickerScreen.swift; sourceTree = "<group>"; };
+		8DB291B429913FE800D05DE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DB291B729913FE800D05DE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8DB291BE29934DE700D05DE3 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		8DB291C0299399FB00D05DE3 /* AnyLayout+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyLayout+.swift"; sourceTree = "<group>"; };
+		8DB291C229939E1600D05DE3 /* SuffixWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixWrapper.swift; sourceTree = "<group>"; };
+		8DB291C42997817E00D05DE3 /* ShapeStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeStyleView.swift; sourceTree = "<group>"; };
+		8DB291CA2998C8C500D05DE3 /* FoodListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListScreen.swift; sourceTree = "<group>"; };
+		8DB291D1299CB97A00D05DE3 /* FoodForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodForm.swift; sourceTree = "<group>"; };
+		8DEBD93F299E17A700BB792A /* FoodDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailSheet.swift; sourceTree = "<group>"; };
+		8DEBD941299E182700BB792A /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
+		8DEBD944299E19EA00BB792A /* SFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbol.swift; sourceTree = "<group>"; };
+		8DEBD946299E29B200BB792A /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		8DEBD948299E29E800BB792A /* Animation+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+.swift"; sourceTree = "<group>"; };
+		8DEBD94A299E2A0800BB792A /* ShapeStyle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+.swift"; sourceTree = "<group>"; };
+		8DEBD94C299E2A2900BB792A /* AnyTransition+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+.swift"; sourceTree = "<group>"; };
+		8DEBD94E299F574A00BB792A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		8DEBD950299F6C7F00BB792A /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		8DEBD952299F799B00BB792A /* AppStorage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStorage+.swift"; sourceTree = "<group>"; };
+		8DEBD954299F7F4C00BB792A /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		8DEBD956299F7F8600BB792A /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		8DEBD958299FCE2600BB792A /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		8DEBD95A299FCE7900BB792A /* ForEach+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForEach+.swift"; sourceTree = "<group>"; };
+		8DEBD95E299FCF6600BB792A /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		8DEBD964299FD0E000BB792A /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
+		8DEBD96629A07C5D00BB792A /* TabViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewTest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D41138A29B43A4300D40A9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB291AA29913FE700D05DE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D41138E29B43A4300D40A9A /* FoodPickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D41138F29B43A4300D40A9A /* SuffixTests.swift */,
+			);
+			path = FoodPickerTests;
+			sourceTree = "<group>";
+		};
+		8DB291A429913FE700D05DE3 = {
+			isa = PBXGroup;
+			children = (
+				8DB291AF29913FE700D05DE3 /* FoodPicker */,
+				8DB291C72997935900D05DE3 /* draft */,
+				8D41138E29B43A4300D40A9A /* FoodPickerTests */,
+				8DB291AE29913FE700D05DE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8DB291AE29913FE700D05DE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DB291AD29913FE700D05DE3 /* FoodPicker.app */,
+				8D41138D29B43A4300D40A9A /* FoodPickerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8DB291AF29913FE700D05DE3 /* FoodPicker */ = {
+			isa = PBXGroup;
+			children = (
+				8DB291B029913FE700D05DE3 /* AppEntry.swift */,
+				8DEBD943299E19B600BB792A /* Constant */,
+				8DB291D7299E150900D05DE3 /* Utils */,
+				8DB291CC299CB8BD00D05DE3 /* Model */,
+				8DB291D3299E13F900D05DE3 /* Extension */,
+				8DB291CD299CB91300D05DE3 /* Screen */,
+				8DB291B629913FE800D05DE3 /* Preview Content */,
+			);
+			path = FoodPicker;
+			sourceTree = "<group>";
+		};
+		8DB291B629913FE800D05DE3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8DB291B429913FE800D05DE3 /* Assets.xcassets */,
+				8DB291B729913FE800D05DE3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8DB291C72997935900D05DE3 /* draft */ = {
+			isa = PBXGroup;
+			children = (
+				8DB291C42997817E00D05DE3 /* ShapeStyleView.swift */,
+				8DEBD96629A07C5D00BB792A /* TabViewTest.swift */,
+			);
+			path = draft;
+			sourceTree = "<group>";
+		};
+		8DB291CC299CB8BD00D05DE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DB291BE29934DE700D05DE3 /* Food.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8DB291CD299CB91300D05DE3 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBD962299FD03B00BB792A /* Settings */,
+				8DEBD95C299FCF3000BB792A /* Home */,
+				8DB291D6299E149300D05DE3 /* FoodList */,
+				8DB291D5299E148400D05DE3 /* FoodPicker */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		8DB291D3299E13F900D05DE3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8DB291C0299399FB00D05DE3 /* AnyLayout+.swift */,
+				8DEBD946299E29B200BB792A /* View+.swift */,
+				8DEBD948299E29E800BB792A /* Animation+.swift */,
+				8DEBD94A299E2A0800BB792A /* ShapeStyle+.swift */,
+				8DEBD94C299E2A2900BB792A /* AnyTransition+.swift */,
+				8DEBD952299F799B00BB792A /* AppStorage+.swift */,
+				8DEBD958299FCE2600BB792A /* Array+.swift */,
+				8DEBD95A299FCE7900BB792A /* ForEach+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8DB291D5299E148400D05DE3 /* FoodPicker */ = {
+			isa = PBXGroup;
+			children = (
+				8DB291B229913FE700D05DE3 /* FoodPickerScreen.swift */,
+			);
+			path = FoodPicker;
+			sourceTree = "<group>";
+		};
+		8DB291D6299E149300D05DE3 /* FoodList */ = {
+			isa = PBXGroup;
+			children = (
+				8DB291CA2998C8C500D05DE3 /* FoodListScreen.swift */,
+				8DEBD93E299E178A00BB792A /* View */,
+			);
+			path = FoodList;
+			sourceTree = "<group>";
+		};
+		8DB291D7299E150900D05DE3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8DB291C229939E1600D05DE3 /* SuffixWrapper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8DEBD93E299E178A00BB792A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DB291D1299CB97A00D05DE3 /* FoodForm.swift */,
+				8DEBD93F299E17A700BB792A /* FoodDetailSheet.swift */,
+				8DEBD941299E182700BB792A /* Sheet.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DEBD943299E19B600BB792A /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBD944299E19EA00BB792A /* SFSymbol.swift */,
+				8DEBD954299F7F4C00BB792A /* Unit.swift */,
+				8DEBD956299F7F8600BB792A /* UserDefaultsKey.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		8DEBD95C299FCF3000BB792A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBD95D299FCF3B00BB792A /* View */,
+				8DEBD94E299F574A00BB792A /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8DEBD95D299FCF3B00BB792A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBD95E299FCF6600BB792A /* Tab.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DEBD962299FD03B00BB792A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBD950299F6C7F00BB792A /* SettingsScreen.swift */,
+				8DEBD963299FD05D00BB792A /* Constants */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		8DEBD963299FD05D00BB792A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBD964299FD0E000BB792A /* Dialog.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D41138C29B43A4300D40A9A /* FoodPickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D41139529B43A4300D40A9A /* Build configuration list for PBXNativeTarget "FoodPickerTests" */;
+			buildPhases = (
+				8D41138929B43A4300D40A9A /* Sources */,
+				8D41138A29B43A4300D40A9A /* Frameworks */,
+				8D41138B29B43A4300D40A9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D41139229B43A4300D40A9A /* PBXTargetDependency */,
+			);
+			name = FoodPickerTests;
+			productName = FoodPickerTests;
+			productReference = 8D41138D29B43A4300D40A9A /* FoodPickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8DB291AC29913FE700D05DE3 /* FoodPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DB291BB29913FE800D05DE3 /* Build configuration list for PBXNativeTarget "FoodPicker" */;
+			buildPhases = (
+				8DB291A929913FE700D05DE3 /* Sources */,
+				8DB291AA29913FE700D05DE3 /* Frameworks */,
+				8DB291AB29913FE700D05DE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoodPicker;
+			productName = FoodPicker;
+			productReference = 8DB291AD29913FE700D05DE3 /* FoodPicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8DB291A529913FE700D05DE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8D41138C29B43A4300D40A9A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 8DB291AC29913FE700D05DE3;
+					};
+					8DB291AC29913FE700D05DE3 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 8DB291A829913FE700D05DE3 /* Build configuration list for PBXProject "FoodPicker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8DB291A429913FE700D05DE3;
+			productRefGroup = 8DB291AE29913FE700D05DE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DB291AC29913FE700D05DE3 /* FoodPicker */,
+				8D41138C29B43A4300D40A9A /* FoodPickerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D41138B29B43A4300D40A9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB291AB29913FE700D05DE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DB291B829913FE800D05DE3 /* Preview Assets.xcassets in Resources */,
+				8DB291B529913FE800D05DE3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D41138929B43A4300D40A9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D41139029B43A4300D40A9A /* SuffixTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB291A929913FE700D05DE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DB291B329913FE700D05DE3 /* FoodPickerScreen.swift in Sources */,
+				8DEBD949299E29E800BB792A /* Animation+.swift in Sources */,
+				8DEBD95B299FCE7900BB792A /* ForEach+.swift in Sources */,
+				8DEBD940299E17A700BB792A /* FoodDetailSheet.swift in Sources */,
+				8DB291B129913FE700D05DE3 /* AppEntry.swift in Sources */,
+				8DEBD957299F7F8600BB792A /* UserDefaultsKey.swift in Sources */,
+				8DEBD94F299F574A00BB792A /* HomeScreen.swift in Sources */,
+				8DB291BF29934DE700D05DE3 /* Food.swift in Sources */,
+				8DEBD955299F7F4C00BB792A /* Unit.swift in Sources */,
+				8DEBD947299E29B200BB792A /* View+.swift in Sources */,
+				8DB291CB2998C8C500D05DE3 /* FoodListScreen.swift in Sources */,
+				8DEBD942299E182700BB792A /* Sheet.swift in Sources */,
+				8DB291C329939E1600D05DE3 /* SuffixWrapper.swift in Sources */,
+				8DB291D2299CB97A00D05DE3 /* FoodForm.swift in Sources */,
+				8DEBD959299FCE2600BB792A /* Array+.swift in Sources */,
+				8DEBD965299FD0E000BB792A /* Dialog.swift in Sources */,
+				8DEBD951299F6C7F00BB792A /* SettingsScreen.swift in Sources */,
+				8DB291C52997817E00D05DE3 /* ShapeStyleView.swift in Sources */,
+				8DEBD95F299FCF6600BB792A /* Tab.swift in Sources */,
+				8DEBD953299F799B00BB792A /* AppStorage+.swift in Sources */,
+				8DB291C1299399FB00D05DE3 /* AnyLayout+.swift in Sources */,
+				8DEBD96729A07C5D00BB792A /* TabViewTest.swift in Sources */,
+				8DEBD945299E19EA00BB792A /* SFSymbol.swift in Sources */,
+				8DEBD94B299E2A0800BB792A /* ShapeStyle+.swift in Sources */,
+				8DEBD94D299E2A2900BB792A /* AnyTransition+.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D41139229B43A4300D40A9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DB291AC29913FE700D05DE3 /* FoodPicker */;
+			targetProxy = 8D41139129B43A4300D40A9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8D41139329B43A4300D40A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DADW9Q983Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elee.FoodPickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FoodPicker";
+			};
+			name = Debug;
+		};
+		8D41139429B43A4300D40A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DADW9Q983Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elee.FoodPickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FoodPicker";
+			};
+			name = Release;
+		};
+		8DB291B929913FE800D05DE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8DB291BA29913FE800D05DE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8DB291BC29913FE800D05DE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FoodPicker/Preview Content\"";
+				DEVELOPMENT_TEAM = DADW9Q983Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elee.FoodPicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8DB291BD29913FE800D05DE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FoodPicker/Preview Content\"";
+				DEVELOPMENT_TEAM = DADW9Q983Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elee.FoodPicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D41139529B43A4300D40A9A /* Build configuration list for PBXNativeTarget "FoodPickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D41139329B43A4300D40A9A /* Debug */,
+				8D41139429B43A4300D40A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DB291A829913FE700D05DE3 /* Build configuration list for PBXProject "FoodPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DB291B929913FE800D05DE3 /* Debug */,
+				8DB291BA29913FE800D05DE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DB291BB29913FE800D05DE3 /* Build configuration list for PBXNativeTarget "FoodPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DB291BC29913FE800D05DE3 /* Debug */,
+				8DB291BD29913FE800D05DE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8DB291A529913FE700D05DE3 /* Project object */;
+}

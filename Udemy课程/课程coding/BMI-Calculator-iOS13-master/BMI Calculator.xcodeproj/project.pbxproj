@@ -3,37 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D1A1DE429FAA7E400FFE674 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A1DE329FAA7E400FFE674 /* Question.swift */; };
-		8D1A1DE929FABFC800FFE674 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A1DE829FABFC800FFE674 /* QuizBrain.swift */; };
-		AD4BDE4A22D878BA005BA4CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */; };
-		AD4BDE4C22D878BA005BA4CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4B22D878BA005BA4CC /* SceneDelegate.swift */; };
-		AD4BDE4E22D878BA005BA4CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4D22D878BA005BA4CC /* ViewController.swift */; };
-		AD4BDE5122D878BA005BA4CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4BDE4F22D878BA005BA4CC /* Main.storyboard */; };
-		AD4BDE5322D878BC005BA4CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD4BDE5222D878BC005BA4CC /* Assets.xcassets */; };
-		AD4BDE5622D878BC005BA4CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4BDE5422D878BC005BA4CC /* LaunchScreen.storyboard */; };
-		AD7631B622F9851900C6E71B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD7631B522F9851900C6E71B /* README.md */; };
+		AD0B9F7A230D61800065EFD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9F79230D61800065EFD9 /* AppDelegate.swift */; };
+		AD0B9F7C230D61800065EFD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9F7B230D61800065EFD9 /* SceneDelegate.swift */; };
+		AD0B9F7E230D61800065EFD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B9F7D230D61800065EFD9 /* ViewController.swift */; };
+		AD0B9F81230D61800065EFD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0B9F7F230D61800065EFD9 /* Main.storyboard */; };
+		AD0B9F83230D61840065EFD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD0B9F82230D61840065EFD9 /* Assets.xcassets */; };
+		AD0B9F86230D61840065EFD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0B9F84230D61840065EFD9 /* LaunchScreen.storyboard */; };
+		AD64359A2312D0BC00E22B00 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD6435992312D0BC00E22B00 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8D1A1DE329FAA7E400FFE674 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		8D1A1DE829FABFC800FFE674 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
-		AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quizzler-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD4BDE4B22D878BA005BA4CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD4BDE4D22D878BA005BA4CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AD4BDE5022D878BA005BA4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AD4BDE5222D878BC005BA4CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AD4BDE5522D878BC005BA4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AD4BDE5722D878BC005BA4CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD7631B522F9851900C6E71B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AD0B9F76230D61800065EFD9 /* BMI Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0B9F79230D61800065EFD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AD0B9F7B230D61800065EFD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AD0B9F7D230D61800065EFD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD0B9F80230D61800065EFD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD0B9F82230D61840065EFD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD0B9F85230D61840065EFD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD0B9F87230D61840065EFD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD6435992312D0BC00E22B00 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AD4BDE4322D878BA005BA4CC /* Frameworks */ = {
+		AD0B9F73230D61800065EFD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,100 +39,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D1A1DE529FAB14200FFE674 /* Model */ = {
+		AD0B9F6D230D61800065EFD9 = {
 			isa = PBXGroup;
 			children = (
-				8D1A1DE329FAA7E400FFE674 /* Question.swift */,
-				8D1A1DE829FABFC800FFE674 /* QuizBrain.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8D1A1DE629FAB14A00FFE674 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8D1A1DE729FAB15000FFE674 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				AD4BDE4D22D878BA005BA4CC /* ViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		AD4BDE3D22D878BA005BA4CC = {
-			isa = PBXGroup;
-			children = (
-				AD7631B522F9851900C6E71B /* README.md */,
-				AD4BDE4822D878BA005BA4CC /* Quizzler-iOS13 */,
-				AD4BDE4722D878BA005BA4CC /* Products */,
+				AD6435992312D0BC00E22B00 /* README.md */,
+				AD0B9F78230D61800065EFD9 /* BMI Calculator */,
+				AD0B9F77230D61800065EFD9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AD4BDE4722D878BA005BA4CC /* Products */ = {
+		AD0B9F77230D61800065EFD9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */,
+				AD0B9F76230D61800065EFD9 /* BMI Calculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AD4BDE4822D878BA005BA4CC /* Quizzler-iOS13 */ = {
+		AD0B9F78230D61800065EFD9 /* BMI Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */,
-				AD4BDE4B22D878BA005BA4CC /* SceneDelegate.swift */,
-				8D1A1DE529FAB14200FFE674 /* Model */,
-				8D1A1DE729FAB15000FFE674 /* Controller */,
-				8D1A1DE629FAB14A00FFE674 /* View */,
-				AD4BDE4F22D878BA005BA4CC /* Main.storyboard */,
-				AD4BDE5222D878BC005BA4CC /* Assets.xcassets */,
-				AD4BDE5422D878BC005BA4CC /* LaunchScreen.storyboard */,
-				AD4BDE5722D878BC005BA4CC /* Info.plist */,
+				AD0B9F79230D61800065EFD9 /* AppDelegate.swift */,
+				AD0B9F7B230D61800065EFD9 /* SceneDelegate.swift */,
+				AD0B9F8F230D63EA0065EFD9 /* Models */,
+				AD0B9F8E230D63E10065EFD9 /* Views */,
+				AD0B9F8D230D63D70065EFD9 /* Controllers */,
+				AD0B9F82230D61840065EFD9 /* Assets.xcassets */,
+				AD0B9F84230D61840065EFD9 /* LaunchScreen.storyboard */,
+				AD0B9F87230D61840065EFD9 /* Info.plist */,
 			);
-			path = "Quizzler-iOS13";
+			path = "BMI Calculator";
+			sourceTree = "<group>";
+		};
+		AD0B9F8D230D63D70065EFD9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD0B9F7D230D61800065EFD9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AD0B9F8E230D63E10065EFD9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD0B9F7F230D61800065EFD9 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD0B9F8F230D63EA0065EFD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AD4BDE4522D878BA005BA4CC /* Quizzler-iOS13 */ = {
+		AD0B9F75230D61800065EFD9 /* BMI Calculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD4BDE5A22D878BC005BA4CC /* Build configuration list for PBXNativeTarget "Quizzler-iOS13" */;
+			buildConfigurationList = AD0B9F8A230D61840065EFD9 /* Build configuration list for PBXNativeTarget "BMI Calculator" */;
 			buildPhases = (
-				AD4BDE4222D878BA005BA4CC /* Sources */,
-				AD4BDE4322D878BA005BA4CC /* Frameworks */,
-				AD4BDE4422D878BA005BA4CC /* Resources */,
+				AD0B9F72230D61800065EFD9 /* Sources */,
+				AD0B9F73230D61800065EFD9 /* Frameworks */,
+				AD0B9F74230D61800065EFD9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Quizzler-iOS13";
-			productName = "Quizzler-iOS13";
-			productReference = AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */;
+			name = "BMI Calculator";
+			productName = "BMI Calculator";
+			productReference = AD0B9F76230D61800065EFD9 /* BMI Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AD4BDE3E22D878BA005BA4CC /* Project object */ = {
+		AD0B9F6E230D61800065EFD9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1430;
-				ORGANIZATIONNAME = "The App Brewery";
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Angela Yu";
 				TargetAttributes = {
-					AD4BDE4522D878BA005BA4CC = {
+					AD0B9F75230D61800065EFD9 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
-			buildConfigurationList = AD4BDE4122D878BA005BA4CC /* Build configuration list for PBXProject "Quizzler-iOS13" */;
+			buildConfigurationList = AD0B9F71230D61800065EFD9 /* Build configuration list for PBXProject "BMI Calculator" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -144,58 +137,56 @@
 				en,
 				Base,
 			);
-			mainGroup = AD4BDE3D22D878BA005BA4CC;
-			productRefGroup = AD4BDE4722D878BA005BA4CC /* Products */;
+			mainGroup = AD0B9F6D230D61800065EFD9;
+			productRefGroup = AD0B9F77230D61800065EFD9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD4BDE4522D878BA005BA4CC /* Quizzler-iOS13 */,
+				AD0B9F75230D61800065EFD9 /* BMI Calculator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AD4BDE4422D878BA005BA4CC /* Resources */ = {
+		AD0B9F74230D61800065EFD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD4BDE5622D878BC005BA4CC /* LaunchScreen.storyboard in Resources */,
-				AD4BDE5322D878BC005BA4CC /* Assets.xcassets in Resources */,
-				AD7631B622F9851900C6E71B /* README.md in Resources */,
-				AD4BDE5122D878BA005BA4CC /* Main.storyboard in Resources */,
+				AD0B9F86230D61840065EFD9 /* LaunchScreen.storyboard in Resources */,
+				AD0B9F83230D61840065EFD9 /* Assets.xcassets in Resources */,
+				AD64359A2312D0BC00E22B00 /* README.md in Resources */,
+				AD0B9F81230D61800065EFD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AD4BDE4222D878BA005BA4CC /* Sources */ = {
+		AD0B9F72230D61800065EFD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D1A1DE929FABFC800FFE674 /* QuizBrain.swift in Sources */,
-				AD4BDE4E22D878BA005BA4CC /* ViewController.swift in Sources */,
-				8D1A1DE429FAA7E400FFE674 /* Question.swift in Sources */,
-				AD4BDE4A22D878BA005BA4CC /* AppDelegate.swift in Sources */,
-				AD4BDE4C22D878BA005BA4CC /* SceneDelegate.swift in Sources */,
+				AD0B9F7E230D61800065EFD9 /* ViewController.swift in Sources */,
+				AD0B9F7A230D61800065EFD9 /* AppDelegate.swift in Sources */,
+				AD0B9F7C230D61800065EFD9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AD4BDE4F22D878BA005BA4CC /* Main.storyboard */ = {
+		AD0B9F7F230D61800065EFD9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AD4BDE5022D878BA005BA4CC /* Base */,
+				AD0B9F80230D61800065EFD9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AD4BDE5422D878BC005BA4CC /* LaunchScreen.storyboard */ = {
+		AD0B9F84230D61840065EFD9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AD4BDE5522D878BC005BA4CC /* Base */,
+				AD0B9F85230D61840065EFD9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -203,7 +194,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AD4BDE5822D878BC005BA4CC /* Debug */ = {
+		AD0B9F88230D61840065EFD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -229,7 +220,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -264,7 +254,7 @@
 			};
 			name = Debug;
 		};
-		AD4BDE5922D878BC005BA4CC /* Release */ = {
+		AD0B9F89230D61840065EFD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -290,7 +280,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -319,34 +308,34 @@
 			};
 			name = Release;
 		};
-		AD4BDE5B22D878BC005BA4CC /* Debug */ = {
+		AD0B9F8B230D61840065EFD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Quizzler-iOS13/Info.plist";
+				INFOPLIST_FILE = "BMI Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.appbrewery.Quizzler-iOS13";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.appbrewery.BMI-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		AD4BDE5C22D878BC005BA4CC /* Release */ = {
+		AD0B9F8C230D61840065EFD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Quizzler-iOS13/Info.plist";
+				INFOPLIST_FILE = "BMI Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.appbrewery.Quizzler-iOS13";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.appbrewery.BMI-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -356,25 +345,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AD4BDE4122D878BA005BA4CC /* Build configuration list for PBXProject "Quizzler-iOS13" */ = {
+		AD0B9F71230D61800065EFD9 /* Build configuration list for PBXProject "BMI Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD4BDE5822D878BC005BA4CC /* Debug */,
-				AD4BDE5922D878BC005BA4CC /* Release */,
+				AD0B9F88230D61840065EFD9 /* Debug */,
+				AD0B9F89230D61840065EFD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD4BDE5A22D878BC005BA4CC /* Build configuration list for PBXNativeTarget "Quizzler-iOS13" */ = {
+		AD0B9F8A230D61840065EFD9 /* Build configuration list for PBXNativeTarget "BMI Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD4BDE5B22D878BC005BA4CC /* Debug */,
-				AD4BDE5C22D878BC005BA4CC /* Release */,
+				AD0B9F8B230D61840065EFD9 /* Debug */,
+				AD0B9F8C230D61840065EFD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AD4BDE3E22D878BA005BA4CC /* Project object */;
+	rootObject = AD0B9F6E230D61800065EFD9 /* Project object */;
 }

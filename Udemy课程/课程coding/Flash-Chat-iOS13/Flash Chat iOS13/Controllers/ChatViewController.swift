@@ -33,8 +33,10 @@ class ChatViewController: UIViewController {
     
     func loadMessage() {
         
-        // addSnapshotListener来实现实时监听
-        db.collection(K.FStore.collectionName).addSnapshotListener { (querysnapshot, error) in
+        // addSnapshotListener来实现实时监听,使用.order来使消息按照时间升序
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { (querysnapshot, error) in
             // 防止重复加载消息
             self.messages = []
             
@@ -51,6 +53,9 @@ class ChatViewController: UIViewController {
                             // 在后台获取信息后，更新主线程的信息
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                // 更新信息后自动滑动到底部
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                         }
                     }
@@ -72,6 +77,10 @@ class ChatViewController: UIViewController {
                     print("There was an issue saving data to firestore, \(e)")
                 } else {
                     print("Successfully saved data")
+                    DispatchQueue.main.async {
+                        // 然后将消息位清空
+                        self.messageTextfield.text = ""
+                    }
                 }
             }
         }
@@ -95,8 +104,27 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let message = messages[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        cell.label?.text = messages[indexPath.row].body
+        cell.label?.text = message.body
+        
+        // This is a message from the current user
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
+            cell.label.textColor = UIColor(named: K.BrandColors.purple)
+        } else {
+            // This is a message from another sender
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
+            cell.label.textColor = UIColor(named: K.BrandColors.lightPurple)
+        }
+        
+
         return cell
     }
 }

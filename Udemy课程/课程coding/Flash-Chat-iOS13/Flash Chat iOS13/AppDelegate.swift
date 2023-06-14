@@ -3,6 +3,7 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -12,9 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-        
 //        let db = Firestore.firestore()
-        
+        // 消息键盘
+        IQKeyboardManager.shared.enable = true
+        // 不显示自带的键盘工具栏
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        // 点击键盘外的区域自动收回键盘
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
         return true
     }

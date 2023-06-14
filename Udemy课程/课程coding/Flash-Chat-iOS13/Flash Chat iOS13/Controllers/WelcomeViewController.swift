@@ -12,6 +12,17 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     
+    // 隐藏navigationbar（这里是隐藏后后续界面也不会出现navigationBar）
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    // 让后续界面继续出现navigationBar
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

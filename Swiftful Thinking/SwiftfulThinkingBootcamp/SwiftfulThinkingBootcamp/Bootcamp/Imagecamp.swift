@@ -10,11 +10,12 @@ import SwiftUI
 struct Imagecamp: View {
     var body: some View {
         Image("girl")
-//           .renderingMode(.template)
-//           .foregroundColor(.red)
+
             .resizable()
             .scaledToFit()
             .frame(width: 500)
+//           .renderingMode(.template)
+//           .foregroundColor(.red)
         
        
             .clipShape(

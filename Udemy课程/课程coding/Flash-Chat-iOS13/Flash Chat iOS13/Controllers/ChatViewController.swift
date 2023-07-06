@@ -32,7 +32,6 @@ class ChatViewController: UIViewController {
     }
     
     func loadMessage() {
-        
         // addSnapshotListener来实现实时监听,使用.order来使消息按照时间升序
         db.collection(K.FStore.collectionName)
             .order(by: K.FStore.dateField)

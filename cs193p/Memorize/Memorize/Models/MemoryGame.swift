@@ -78,10 +78,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         let content: CardContent
         let id: Int
         
-        
-        
-        
-        
         // MARK: - Bonus Time
         //this could give matching bonus points
         //if the user matches the card

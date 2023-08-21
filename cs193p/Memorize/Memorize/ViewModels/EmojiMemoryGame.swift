@@ -1,9 +1,3 @@
-//
-//  EmojiMemoryGame.swift
-//  Memorize
-//
-//  Created by 李昌骏 on 2022/10/15.
-//
 
 //ViewModel Of Memorize
 

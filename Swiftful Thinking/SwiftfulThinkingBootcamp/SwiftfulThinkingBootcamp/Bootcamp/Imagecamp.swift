@@ -1,9 +1,3 @@
-//
-//  Imagecamp.swift
-//  SwiftfulThinkingBootcamp
-//
-//  Created by Changjun Li on 2023/2/19.
-//
 
 import SwiftUI
 

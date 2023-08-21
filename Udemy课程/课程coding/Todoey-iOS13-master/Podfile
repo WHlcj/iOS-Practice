@@ -6,6 +6,21 @@ target 'Todoey' do
   use_frameworks!
 
   # Pods for Todoey
+  # Realm
   pod 'RealmSwift', '~>10'
+  # 侧滑
+  pod 'SwipeCellKit'
+  # 变色龙
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon.git', :branch => 'swift5'
+  
+  
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == "ChameleonFramework"
+      target.remove_from_project
+    end
+  end
 end

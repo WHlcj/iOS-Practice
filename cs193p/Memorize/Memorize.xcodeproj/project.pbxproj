@@ -19,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8D23039628FA504F00144098 /* short_time_store.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = short_time_store.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8D23039728FA534300144098 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		8D23039928FA597C00144098 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		8D7338C2290C0B1600A2C1E4 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
@@ -68,7 +67,6 @@
 				8DF60ABC29D1DD4100C65500 /* Views */,
 				8DD5E47E28F5B88D0047D7F4 /* Assets.xcassets */,
 				8DD5E48028F5B88D0047D7F4 /* Preview Content */,
-				8D23039628FA504F00144098 /* short_time_store.playground */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";

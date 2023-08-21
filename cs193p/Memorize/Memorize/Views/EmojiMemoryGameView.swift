@@ -1,9 +1,3 @@
-//
-//  EmojiMemoryGameView.swift
-//  Memorize
-//
-//  Created by 李昌骏 on 2022/10/11.
-//
 
 import SwiftUI
 
@@ -80,8 +74,6 @@ struct EmojiMemoryGameView: View {
             }
         }
         .frame(width: CardConstants.undealtWidth, height: CardConstants.undealtHeight)
-        //.font(Font.system(size: DrawingConstants.fontSize))
-        //.scaleEffect(scale(thatFits: geometry.size))
         .foregroundColor(CardConstants.color)
         .onTapGesture {
             for card in game.cards {

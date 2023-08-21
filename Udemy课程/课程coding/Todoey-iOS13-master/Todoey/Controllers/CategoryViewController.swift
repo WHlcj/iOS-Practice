@@ -8,21 +8,24 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
-class CategoryViewController: UITableViewController {
+class CategoryViewController: SwipeTableViewController {
     
     let realm = try! Realm()
-    
     // Results是一个自动更新容器
     var categories: Results<Category>?
-    // CoreData
-    //let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // NSCoder - FileManager
+
         loadCategories()
+        tableView.rowHeight = 80
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist.")}
+        navBar.backgroundColor = UIColor(hexString: "1D9BF6")
     }
 
     // 添加按钮
@@ -31,26 +34,40 @@ class CategoryViewController: UITableViewController {
         var textField = UITextField()
         // 警报信息
         let alert = UIAlertController(title: "Add New Todoey Category", message: "", preferredStyle: .alert)
-        
+        // 取消
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
         let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
             let newCategory = Category()
             newCategory.name = textField.text ?? "New Category"
+            newCategory.color = UIColor.randomFlat().hexValue()
             // 保存数据
             self.saveCategories(category: newCategory)
         }
         
         // 为警报添加文本输入框
         alert.addTextField { (alertTextField) in
-            
             alertTextField.placeholder = "Create new item"
             textField = alertTextField
         }
+        // 添加取消
+        alert.addAction(cancel)
         // 添加警报
         alert.addAction(action)
-        
         present(alert, animated: true, completion: nil)
     }
-
+    
+    override func updateModel(at indexPath: IndexPath) {
+        // handle action by updating model with deletion
+        if let oldcategory = self.categories?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(oldcategory)
+                }
+            } catch {
+                print("Error deleting category, \(error)")
+            }
+        }
+    }
 }
 
 // MARK: - TableViewDelegate
@@ -62,13 +79,23 @@ extension CategoryViewController {
     }
     // tableView的内容
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
-        
+        // 继承父类
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+
         cell.textLabel?.text = categories?[indexPath.row].name ?? "No Category Added Yet"
+        
+        
+        
+        if let color = UIColor(hexString: (categories?[indexPath.row].color)!) {
+            cell.backgroundColor = color
+            cell.textLabel?.textColor = ContrastColorOf(color, returnFlat: true)
+        } else {
+            cell.backgroundColor = UIColor.cyan
+        }
         
         return cell
     }
-    // 跳转
+    // 页面跳转
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         performSegue(withIdentifier: "goToItems", sender: self)
@@ -86,24 +113,12 @@ extension CategoryViewController {
             // Fallback on earlier versions
         }
     }
-    
-    
 }
 
 // MARK: - CoreData Manipulation Methods
 
 extension CategoryViewController {
     func saveCategories(category: Category) {
-//        // NSCoder
-//        let encoder = PropertyListEncoder()
-//
-//        do {
-//            let data = try encoder.encode(self.itemArray)
-//            try data.write(to: self.dataFilePath!)
-//        } catch {
-//            print("Error encoding item array \(error)")
-//        }
-        
         do {
             //try context.save()
             try realm.write {
@@ -122,22 +137,5 @@ extension CategoryViewController {
         
         tableView.reloadData()
     }
-//    func loadCategories(with request: NSFetchRequest<Category> = Category.fetchRequest()) {
-//         NSCoder
-//        if let data = try? Data(contentsOf: dataFilePath!) {
-//            let decoder = PropertyListDecoder()
-//            do {
-//                itemArray = try decoder.decode([Item].self, from: data)
-//            } catch {
-//                print("Error decoding item array, \(error)")
-//            }
-//        }
-//         Core Data
-//        do {
-//            categoryArray = try context.fetch(request)
-//        } catch {
-//            print("Error fetching data from context \(error)")
-//        }
-//        tableView.reloadData()
-//    }
 }
+

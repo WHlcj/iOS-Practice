@@ -62,7 +62,6 @@ struct WeatherManager {
             delegate?.didFailWithError(error: error)
             return nil
         }
-        
     }
     
 

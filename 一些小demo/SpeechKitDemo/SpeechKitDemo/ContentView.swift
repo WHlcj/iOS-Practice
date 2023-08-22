@@ -4,8 +4,6 @@ import SwiftSpeech
 
 struct ContentView: View {
     
-    var locale = Locale(identifier: "zh-CN")
-    
     @State var text = "say somthing"
     
     var body: some View {
@@ -13,13 +11,12 @@ struct ContentView: View {
             Text(text)
                 .font(.system(size: 25, weight: .bold, design: .default))
             SwiftSpeech.RecordButton()
-                .swiftSpeechToggleRecordingOnTap(locale: locale)
+                .swiftSpeechToggleRecordingOnTap(locale: Locale(identifier: "zh-CN"))
                 .onRecognizeLatest(update: $text)
         }
         .padding()
         .onAppear {
             SwiftSpeech.requestSpeechRecognitionAuthorization()
-            print(locale)
         }
     }
 }

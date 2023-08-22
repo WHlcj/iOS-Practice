@@ -39,6 +39,7 @@ struct Slidercamp: View {
                 })
                 .tint(.cyan)
                 .padding(.horizontal, 50)
+            
         }
     }
 }

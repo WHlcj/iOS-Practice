@@ -39,9 +39,15 @@ class VoiceToImageManager: ObservableObject {
             
             if let safeData = data {
                 if let taskId = self.parseAskImageJSON(safeData) {
-                    // 延时处理保证图片成功生成再后返回
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+//                    // 延时处理保证图片成功生成再后返回
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+//                        self.performGetImage(id: taskId)
+//                    }
+                    if taskId != "" {
+                        print("taskId返回成功是:\(taskId)")
                         self.performGetImage(id: taskId)
+                    } else {
+                        print("taskId返回失败是:\(taskId)")
                     }
                 }
             }
@@ -73,8 +79,15 @@ class VoiceToImageManager: ObservableObject {
             
             if let safeData = data {
                 if let imageURL = self.parseGetImageJSON(safeData) {
-                    self.img = imageURL
-                    print("imageURL为: \(imageURL)")
+                    if imageURL != "" {
+                        print("图片网址返回成功是\(imageURL)")
+                        self.img = imageURL
+                    } else {
+                        print("图片网址返回失败是\(imageURL),1秒后将重新请求")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            self.performGetImage(id: id)
+                        }
+                    }
                 }
             }
         }

@@ -2,7 +2,7 @@
 import SwiftUI
 import PencilKit
 
-struct PencilKitDemoView: View {
+struct PencilKitDemo: View {
     // 画板
     @State var canvas = PKCanvasView()
     // 默认能够画画
@@ -17,21 +17,17 @@ struct PencilKitDemoView: View {
     @State var lineWidth = 1.0
     
     var body: some View {
-        NavigationStack {
+        VStack {
             customTopBar
-            DrawView(canvas: $canvas, isDrawing: $isDrawing, type: $tool, color: $currentColor, lineWidth: $lineWidth)
+            DrawingBoard(canvas: $canvas, isDrawing: $isDrawing, type: $tool, color: $currentColor, lineWidth: $lineWidth)
             custiomBottomBar
         }
-    }
-    
-    private func saveImage() {
-        UIImageWriteToSavedPhotosAlbum(self.canvas.drawing.image(from: canvas.bounds, scale: 1), nil, nil, nil)
     }
 }
 
 // MARK: - 功能按钮
 
-extension PencilKitDemoView {
+extension PencilKitDemo {
     /// 顶部功能栏
     var customTopBar: some View {
         HStack {
@@ -103,8 +99,17 @@ extension PencilKitDemoView {
     }
 }
 
-struct PencilKitDemoView_Previews: PreviewProvider {
+// MARK: - Functions
+
+extension PencilKitDemo {
+    /// 画板截图，保存图片至手机相册
+    private func saveImage() {
+        UIImageWriteToSavedPhotosAlbum(self.canvas.drawing.image(from: canvas.bounds, scale: 1), nil, nil, nil)
+    }
+}
+
+struct PencilKitDemo_Previews: PreviewProvider {
     static var previews: some View {
-        PencilKitDemoView()
+        PencilKitDemo()
     }
 }

@@ -5,8 +5,8 @@ import SwiftUI
 struct PaintDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            PencilKitDemoView()
-            //CanvasView()
+            PathDrawingDemo()
+            //PencilKitDemo()
         }
     }
 }

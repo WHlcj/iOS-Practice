@@ -2,7 +2,7 @@
 import SwiftUI
 import PencilKit
 
-struct DrawView: UIViewRepresentable {
+struct DrawingBoard: UIViewRepresentable {
     // 传入画板
     @Binding var canvas: PKCanvasView
     // 切换画图工具和橡皮擦

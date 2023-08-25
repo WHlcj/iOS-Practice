@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D8349D42A9919E900477D3F /* DrawingLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8349D32A9919E900477D3F /* DrawingLine.swift */; };
 		8DEB170A2A8E447A00A4DF1C /* PaintDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB17092A8E447A00A4DF1C /* PaintDemoApp.swift */; };
-		8DEB170C2A8E447A00A4DF1C /* PencilKitDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB170B2A8E447A00A4DF1C /* PencilKitDemoView.swift */; };
+		8DEB170C2A8E447A00A4DF1C /* PencilKitDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB170B2A8E447A00A4DF1C /* PencilKitDemo.swift */; };
 		8DEB170E2A8E447C00A4DF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEB170D2A8E447C00A4DF1C /* Assets.xcassets */; };
 		8DEB17112A8E447C00A4DF1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEB17102A8E447C00A4DF1C /* Preview Assets.xcassets */; };
-		8DEB17182A8E44A200A4DF1C /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB17172A8E44A200A4DF1C /* DrawView.swift */; };
-		8DF83E7F2A9260180044CE0D /* PathDrawingDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF83E7E2A9260180044CE0D /* PathDrawingDemoView.swift */; };
+		8DEB17182A8E44A200A4DF1C /* DrawingBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB17172A8E44A200A4DF1C /* DrawingBoard.swift */; };
+		8DF83E7F2A9260180044CE0D /* PathDrawingDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF83E7E2A9260180044CE0D /* PathDrawingDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D8349D32A9919E900477D3F /* DrawingLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingLine.swift; sourceTree = "<group>"; };
 		8DEB17062A8E447A00A4DF1C /* PaintDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaintDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEB17092A8E447A00A4DF1C /* PaintDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintDemoApp.swift; sourceTree = "<group>"; };
-		8DEB170B2A8E447A00A4DF1C /* PencilKitDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitDemoView.swift; sourceTree = "<group>"; };
+		8DEB170B2A8E447A00A4DF1C /* PencilKitDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitDemo.swift; sourceTree = "<group>"; };
 		8DEB170D2A8E447C00A4DF1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DEB17102A8E447C00A4DF1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8DEB17172A8E44A200A4DF1C /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
-		8DF83E7E2A9260180044CE0D /* PathDrawingDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDrawingDemoView.swift; sourceTree = "<group>"; };
+		8DEB17172A8E44A200A4DF1C /* DrawingBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoard.swift; sourceTree = "<group>"; };
+		8DF83E7E2A9260180044CE0D /* PathDrawingDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDrawingDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D8349D12A9919B600477D3F /* PencilKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8DEB170B2A8E447A00A4DF1C /* PencilKitDemo.swift */,
+				8DEB17172A8E44A200A4DF1C /* DrawingBoard.swift */,
+			);
+			path = PencilKitDemo;
+			sourceTree = "<group>";
+		};
+		8D8349D22A9919CA00477D3F /* PathDrawingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8DF83E7E2A9260180044CE0D /* PathDrawingDemo.swift */,
+				8D8349D32A9919E900477D3F /* DrawingLine.swift */,
+			);
+			path = PathDrawingDemo;
+			sourceTree = "<group>";
+		};
 		8DEB16FD2A8E447A00A4DF1C = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				8DEB17092A8E447A00A4DF1C /* PaintDemoApp.swift */,
-				8DEB170B2A8E447A00A4DF1C /* PencilKitDemoView.swift */,
-				8DEB17172A8E44A200A4DF1C /* DrawView.swift */,
-				8DF83E7E2A9260180044CE0D /* PathDrawingDemoView.swift */,
+				8D8349D12A9919B600477D3F /* PencilKitDemo */,
+				8D8349D22A9919CA00477D3F /* PathDrawingDemo */,
 				8DEB170D2A8E447C00A4DF1C /* Assets.xcassets */,
 				8DEB170F2A8E447C00A4DF1C /* Preview Content */,
 			);
@@ -143,10 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DEB170C2A8E447A00A4DF1C /* PencilKitDemoView.swift in Sources */,
+				8DEB170C2A8E447A00A4DF1C /* PencilKitDemo.swift in Sources */,
 				8DEB170A2A8E447A00A4DF1C /* PaintDemoApp.swift in Sources */,
-				8DF83E7F2A9260180044CE0D /* PathDrawingDemoView.swift in Sources */,
-				8DEB17182A8E44A200A4DF1C /* DrawView.swift in Sources */,
+				8DF83E7F2A9260180044CE0D /* PathDrawingDemo.swift in Sources */,
+				8DEB17182A8E44A200A4DF1C /* DrawingBoard.swift in Sources */,
+				8D8349D42A9919E900477D3F /* DrawingLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

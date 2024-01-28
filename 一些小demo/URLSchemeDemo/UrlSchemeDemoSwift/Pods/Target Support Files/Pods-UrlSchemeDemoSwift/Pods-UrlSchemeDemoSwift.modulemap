@@ -1,0 +1,6 @@
+framework module Pods_UrlSchemeDemoSwift {
+  umbrella header "Pods-UrlSchemeDemoSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

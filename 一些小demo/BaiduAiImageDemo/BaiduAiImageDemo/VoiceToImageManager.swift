@@ -4,10 +4,12 @@ import Foundation
 class VoiceToImageManager: ObservableObject {
     
     @Published var img = ""
-    // 文字生成图片请求url
-    let textToImageURL = "https://aip.baidubce.com/rpc/2.0/ernievilg/v1/txt2img?access_token=24.97d11252c9523083e4f3aed70f905f7b.2592000.1695210623.282335-37996049"
-    // 查询生成图片请求url
-    let getImageURL = "https://aip.baidubce.com/rpc/2.0/ernievilg/v1/getImg?access_token=24.97d11252c9523083e4f3aed70f905f7b.2592000.1695210623.282335-37996049"
+    /// 密钥access_token
+    private let access_token = "24.a76786c1ca0086c873849c0d3f9042da.2592000.1696828504.282335-37996049"
+    /// 文字生成图片请求url
+    private let textToImageURL = "https://aip.baidubce.com/rpc/2.0/ernievilg/v1/txt2img?access_token="
+    /// 查询生成图片请求url
+    private let getImageURL = "https://aip.baidubce.com/rpc/2.0/ernievilg/v1/getImg?access_token="
     /// 请求文字生成图片
     func performAskImage(text: String) {
         print("调用performAskImage成功text是\(text)")
@@ -21,7 +23,7 @@ class VoiceToImageManager: ObservableObject {
             // 图片生成数量，支持1-6张
             "num": 1
         ]
-        var request = URLRequest(url: URL(string: textToImageURL)!)
+        var request = URLRequest(url: URL(string: textToImageURL+access_token)!)
         guard let jsonData = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {
             print("Error: Failed to serialize JSON data.")
             return
@@ -39,13 +41,11 @@ class VoiceToImageManager: ObservableObject {
             
             if let safeData = data {
                 if let taskId = self.parseAskImageJSON(safeData) {
-//                    // 延时处理保证图片成功生成再后返回
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-//                        self.performGetImage(id: taskId)
-//                    }
                     if taskId != "" {
                         print("taskId返回成功是:\(taskId)")
-                        self.performGetImage(id: taskId)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 7){
+                            self.performGetImage(id: taskId)
+                        }
                     } else {
                         print("taskId返回失败是:\(taskId)")
                     }
@@ -61,7 +61,7 @@ class VoiceToImageManager: ObservableObject {
             "taskId": id
         ]
         
-        var request = URLRequest(url: URL(string: getImageURL)!)
+        var request = URLRequest(url: URL(string: getImageURL+access_token)!)
         guard let jsonData = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {
             print("Error: Failed to serialize JSON data.")
             return
@@ -70,7 +70,7 @@ class VoiceToImageManager: ObservableObject {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = jsonData
-        
+
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 print("请求返回图片时错误: \(error)")

@@ -132,9 +132,7 @@ extension CategoryViewController {
     }
     
     func loadCategories() {
-        
         categories = realm.objects(Category.self)
-        
         tableView.reloadData()
     }
 }

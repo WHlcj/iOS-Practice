@@ -26,33 +26,42 @@ struct ContentView: View {
     
     var myButton: some View {
         Button {
-            GCDTest_2()
+            GCDTest_1()
         } label: {
             Text("+1")
         }
     }
     
-    // MARK: GCDTest
-    /// 创建GCD队列的方式
+    // MARK: DispatchWorkItem
     func GCDTest_1() {
-        // 创建队列
+        // 创建一个并发队列
         let concurrentQueue = DispatchQueue(label: "com.example.myserial", qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit)
-//        let mainQueue = DispatchQueue.main      // 获取主队列
-        let globalBackground = DispatchQueue.global(qos: .background)
-        // 向队列提交任务
-        concurrentQueue.async {
-            print("直接调用线程: \(Thread.current)")
+        // 创建一个调度块
+        var block = DispatchWorkItem {
+            print("Block is executing")
+            sleep(2)
+            print("Block finished")
         }
-        globalBackground.asyncAfter(deadline: .now()+2, execute: {
-            GCDTest_1()
-            print("间隔2秒调用线程: \(Thread.current)")
-        })
+        concurrentQueue.async(execute: block)
+        // 取消块
+        block.cancel()
+        // 修改块
+        block = DispatchWorkItem {
+            print("New block is executing")
+            sleep(2)
+            print("New block finished")
+        }
+        // 将块提交到队列
+        concurrentQueue.async(execute: block)
+        // 延迟2秒以观察效果
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            print("Method ended")
+        }
     }
-    
     /// 向串行队列提交任务
     func GCDTest_2() {
         sum += 1
-        let serialQueue = DispatchQueue(label: "com.example.myserial")
+//        let serialQueue = DispatchQueue(label: "com.example.myserial")
         let concurrentQueue = DispatchQueue(label: "com.example.myconcurrent", attributes: .concurrent)
         print("start")
         concurrentQueue.async {
@@ -72,7 +81,7 @@ struct ContentView: View {
         }
         print("end")
     }
-// MARK: QoS
+    // MARK: QoS
     /// QoS示例 - 向不同QoS队列提交任务
     func GCDTest_3_1() {
         // 获取不同 QoS 级别的全局并发队列
@@ -123,7 +132,7 @@ struct ContentView: View {
         print("-----------------------------")
     }
     
-// MARK: Semaphore
+    // MARK: Semaphore
     /// 初探信号量Semaphore
     func GCDTest_4() {
         sum += 1

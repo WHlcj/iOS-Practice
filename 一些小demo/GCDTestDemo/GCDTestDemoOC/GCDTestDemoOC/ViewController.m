@@ -55,6 +55,7 @@
 - (void)incrementNumber {
     self.sum += 1;
     self.numberLabel.text = [NSString stringWithFormat:@"%ld", (long)self.sum];
+    [self GCDTest_1];
 }
 
 // MARK: GCDTest
@@ -63,8 +64,25 @@
     // 创建队列
     dispatch_queue_attr_t myAttr = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_CONCURRENT, QOS_CLASS_DEFAULT, 0);
     dispatch_queue_t concurrentQueue = dispatch_queue_create("com.example.myconcurrent", myAttr);
-//    dispatch_queue_t mainQueue = dispatch_get_main_queue();
-    dispatch_queue_t globalBackground = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0);
+    // 创建一个调度块
+    dispatch_block_t myBlock = dispatch_block_create(0, ^{
+        NSLog(@"Block is excuting!");
+        sleep(2);
+        NSLog(@"Block finished");
+    });
+    // 提交异步任务
+    dispatch_async(concurrentQueue, myBlock);
+    // 取消块
+    dispatch_block_cancel(myBlock);
+    // 修改块
+    myBlock = dispatch_block_create(0, ^{
+        NSLog(@"New block is excuting!");
+        sleep(2);
+        NSLog(@"New block finished");
+    });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"Method end");
+    });
 }
 
 /// 向线程提交任务

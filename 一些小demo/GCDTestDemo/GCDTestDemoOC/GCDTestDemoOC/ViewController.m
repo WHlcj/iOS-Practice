@@ -58,9 +58,36 @@
     [self GCDTest_1];
 }
 
-// MARK: GCDTest
-/// 创建GCD队列的方式
+// MARK: Basic
+/// 向队列提交任务
 - (void)GCDTest_1 {
+    dispatch_queue_t serialQueue = dispatch_queue_create("com.example.serial", NULL);
+//    dispatch_queue_t concurrentQueue = dispatch_queue_create("com.example.myconcurrent", DISPATCH_QUEUE_CONCURRENT);
+    NSLog(@"start");
+    dispatch_async(serialQueue, ^{
+        NSLog(@"block1 start");
+        sleep(3);
+        NSLog(@"block1 调用线程: %@", [NSThread currentThread]);
+    });
+    dispatch_async(serialQueue, ^{
+        NSLog(@"block2 start");
+        sleep(2);
+        NSLog(@"block2 调用线程: %@", [NSThread currentThread]);
+    });
+    dispatch_async(serialQueue, ^{
+        NSLog(@"block3 start");
+        sleep(1);
+        NSLog(@"block3 调用线程: %@", [NSThread currentThread]);
+    });
+    // 模拟大量主线程任务
+    for (int i=0;i<10000;i++) {
+        i = i * i;
+    }
+    NSLog(@"end");
+}
+
+// MARK: Block
+- (void)GCDTest_2 {
     // 创建队列
     dispatch_queue_attr_t myAttr = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_CONCURRENT, QOS_CLASS_DEFAULT, 0);
     dispatch_queue_t concurrentQueue = dispatch_queue_create("com.example.myconcurrent", myAttr);
@@ -83,29 +110,6 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSLog(@"Method end");
     });
-}
-
-/// 向线程提交任务
-- (void)GCDTest_2 {
-    dispatch_queue_t serialQueue = dispatch_queue_create("com.example.serial", NULL);
-    dispatch_queue_t concurrentQueue = dispatch_queue_create("com.example.myconcurrent", DISPATCH_QUEUE_CONCURRENT);
-    NSLog(@"start");
-    dispatch_async(serialQueue, ^{
-        NSLog(@"block1 start");
-        sleep(3);
-        NSLog(@"block1 调用线程: %@", [NSThread currentThread]);
-    });
-    dispatch_async(serialQueue, ^{
-        NSLog(@"block2 start");
-        sleep(2);
-        NSLog(@"block2 调用线程: %@", [NSThread currentThread]);
-    });
-    dispatch_async(serialQueue, ^{
-        NSLog(@"block3 start");
-        sleep(1);
-        NSLog(@"block3 调用线程: %@", [NSThread currentThread]);
-    });
-    NSLog(@"end");
 }
 
 // MARK: QoS
@@ -141,21 +145,34 @@
 }
 
 /// QoS 示例 - 向同一队列提交不同 QoS 任务
-- (void)GCDTest_3_2 {
-    dispatch_queue_t defaultQueue = dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0);
+- (void) GCDTest_3_2 {
+    // 创建一个自定义的并发队列
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("com.example.myconcurrent", DISPATCH_QUEUE_CONCURRENT);
     
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), ^{
+    // 创建并提交具有 Background QoS 的任务
+    dispatch_block_t backgroundBlock = dispatch_block_create_with_qos_class(0, QOS_CLASS_BACKGROUND, 0, ^{
         NSLog(@"Background task");
     });
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), ^{
+    dispatch_async(concurrentQueue, backgroundBlock);
+    
+    // 创建并提交具有 Utility QoS 的任务
+    dispatch_block_t utilityBlock = dispatch_block_create_with_qos_class(0, QOS_CLASS_UTILITY, 0, ^{
         NSLog(@"Utility task");
     });
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+    dispatch_async(concurrentQueue, utilityBlock);
+    
+    // 创建并提交具有 User Initiated QoS 的任务
+    dispatch_block_t userInitiatedBlock = dispatch_block_create_with_qos_class(0, QOS_CLASS_USER_INITIATED, 0, ^{
         NSLog(@"User Initiated task");
     });
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0), ^{
+    dispatch_async(concurrentQueue, userInitiatedBlock);
+    
+    // 创建并提交具有 User Interactive QoS 的任务
+    dispatch_block_t userInteractiveBlock = dispatch_block_create_with_qos_class(0, QOS_CLASS_USER_INTERACTIVE, 0, ^{
         NSLog(@"User Interactive task");
     });
+    dispatch_async(concurrentQueue, userInteractiveBlock);
+    
     NSLog(@"-----------------------------");
 }
 

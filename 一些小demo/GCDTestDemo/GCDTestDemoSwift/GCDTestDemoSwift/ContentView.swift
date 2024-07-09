@@ -32,8 +32,37 @@ struct ContentView: View {
         }
     }
     
-    // MARK: DispatchWorkItem
+    // MARK: Basic
+    /// 向队列提交异步任务
     func GCDTest_1() {
+        sum += 1
+        let serialQueue = DispatchQueue(label: "com.example.myserial")
+//        let concurrentQueue = DispatchQueue(label: "com.example.myconcurrent", attributes: .concurrent)
+        print("start")
+        serialQueue.async {
+            print("closure1 start")
+            sleep(3)
+            print("closure1 调用线程: \(Thread.current)")
+        }
+        serialQueue.async {
+            print("closure2 start")
+            sleep(2)
+            print("closure2 调用线程: \(Thread.current)")
+        }
+        serialQueue.async {
+            print("closure3 start")
+            sleep(1)
+            print("closure3 调用线程: \(Thread.current)")
+        }
+        // 模拟大量主线程任务
+        for i in 1...10000 {
+            _ = i * i
+        }
+        print("end")
+    }
+    
+    // MARK: DispatchWorkItem
+    func GCDTest_2() {
         // 创建一个并发队列
         let concurrentQueue = DispatchQueue(label: "com.example.myserial", qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit)
         // 创建一个调度块
@@ -58,29 +87,7 @@ struct ContentView: View {
             print("Method ended")
         }
     }
-    /// 向串行队列提交任务
-    func GCDTest_2() {
-        sum += 1
-//        let serialQueue = DispatchQueue(label: "com.example.myserial")
-        let concurrentQueue = DispatchQueue(label: "com.example.myconcurrent", attributes: .concurrent)
-        print("start")
-        concurrentQueue.async {
-            print("closure1 start")
-            sleep(3)
-            print("closure1 调用线程: \(Thread.current)")
-        }
-        concurrentQueue.async {
-            print("closure2 start")
-            sleep(2)
-            print("closure2 调用线程: \(Thread.current)")
-        }
-        concurrentQueue.async {
-            print("closure3 start")
-            sleep(1)
-            print("closure3 调用线程: \(Thread.current)")
-        }
-        print("end")
-    }
+    
     // MARK: QoS
     /// QoS示例 - 向不同QoS队列提交任务
     func GCDTest_3_1() {
@@ -115,18 +122,18 @@ struct ContentView: View {
     
     /// QoS示例 - 向同一队列提交不同QoS任务
     func GCDTest_3_2() {
-        let defaultQueue = DispatchQueue.global(qos: .default)
+        let concurrentQueue = DispatchQueue(label: "com.example.myconcurrent")
         
-        defaultQueue.async(qos: .background) {
+        concurrentQueue.async(qos: .background) {
             print("Background task")
         }
-        defaultQueue.async(qos: .utility) {
+        concurrentQueue.async(qos: .utility) {
             print("Utility task")
         }
-        defaultQueue.async(qos: .userInitiated) {
+        concurrentQueue.async(qos: .userInitiated) {
             print("User Initiated task")
         }
-        defaultQueue.async(qos: .userInteractive) {
+        concurrentQueue.async(qos: .userInteractive) {
             print("User Interactive task")
         }
         print("-----------------------------")

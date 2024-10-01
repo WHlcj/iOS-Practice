@@ -14,8 +14,8 @@ static NSThread *customThread = nil;
 + (void)threadEntryPoint {
     @autoreleasepool {
         NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
-        [runLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
-        [runLoop run];  // 保证线程不会退出
+        [runLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode]; // 添加 NSMachPort 是为了防止 RunLoop 由于缺乏事件源而立刻退出，确保线程在有任务时能正常响应和处理。
+        [runLoop run];
     }
 }
 

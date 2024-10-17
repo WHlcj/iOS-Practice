@@ -43,9 +43,18 @@ void setupCrashHandler(void) {
     
     // 设置全局异常处理器
     setupCrashHandler();
+    
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"123");
+    });
 
-    // 模拟一个崩溃
-    @throw [NSException exceptionWithName:@"TestException" reason:@"Testing crash" userInfo:nil];
+    @try {
+        // 模拟一个崩溃
+        @throw [NSException exceptionWithName:@"TestException" reason:@"Testing crash" userInfo:nil];
+    }
+    @catch (NSException *ex) {
+        
+    }
 }
 
 

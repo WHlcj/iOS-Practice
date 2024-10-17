@@ -24,6 +24,10 @@
         NSLog(@"观察到 %@ 的 %@ 属性变化: %@", observedObject, keyPath, change);
     }];
     
+    [person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld withBlock:^(id observedObject, NSString *keyPath, NSDictionary *change) {
+        NSLog(@"观察到 %@ 的 %@ 属性变化: %@", observedObject, keyPath, change);
+    }];
+    
     // 触发KVO
     person.name = @"New Name";
     // 移除观察者

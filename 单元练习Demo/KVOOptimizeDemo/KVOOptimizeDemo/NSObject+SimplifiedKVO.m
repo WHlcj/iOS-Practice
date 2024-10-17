@@ -40,7 +40,7 @@ static const char *KVOObserverKey = "KVOObserverKey";
            withBlock:(void (^)(id observedObject, NSString *keyPath, NSDictionary *change))block {
     
     KVOObserver *kvoObserver = [[KVOObserver alloc] initWithCallbackBlock:block];
-    objc_setAssociatedObject(self, KVOObserverKey, kvoObserver, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, (__bridge const void * _Nonnull)(kvoObserver), kvoObserver, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self addObserver:kvoObserver forKeyPath:keyPath options:options context:nil];
 }

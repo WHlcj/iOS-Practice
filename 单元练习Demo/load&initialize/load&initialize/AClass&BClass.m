@@ -12,6 +12,10 @@
 + (void)load {
     NSLog(@"A +load");
 }
+
++ (void)initialize {
+    NSLog(@"A +initialize");
+}
 @end
 
 
@@ -38,14 +42,27 @@
 + (void)load {
     NSLog(@"B +load");
 }
+
++ (void)initialize {
+    NSLog(@"B +initialize");
+}
 @end
 
-// B类的分类 CategoryB
 @interface B (CategoryB)
 @end
 
 @implementation B (CategoryB)
 + (void)load {
     NSLog(@"B (CategoryB) +load");
+}
+@end
+
+@implementation C
++ (void)load {
+    NSLog(@"C +load");
+}
+
++ (void)initialize {
+    NSLog(@"C +initialize");
 }
 @end

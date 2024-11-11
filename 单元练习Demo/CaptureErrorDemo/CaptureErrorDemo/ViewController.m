@@ -48,13 +48,10 @@ void setupCrashHandler(void) {
         NSLog(@"123");
     });
 
-    @try {
+
         // 模拟一个崩溃
         @throw [NSException exceptionWithName:@"TestException" reason:@"Testing crash" userInfo:nil];
-    }
-    @catch (NSException *ex) {
-        
-    }
+
 }
 
 
